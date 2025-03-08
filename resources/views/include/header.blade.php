@@ -9,7 +9,9 @@
             <a href="/">Home</a>
         </li>
         <li>
-            <p>Sobre nós</p>
+            <a href="{{ url('pages/sobre') }}">
+                <p>Sobre nós</p>
+            </a>
         </li>
         <li>
             <p>Contato</p>

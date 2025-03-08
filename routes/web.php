@@ -1,9 +1,11 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('menu');
+Route::get('/user/show', [UserController::class, 'index'])->name('user.show');
+
+Route::get('/User/show', function () {
+    return view('show');
 });
 
 Route::get('cadastro', function () {
@@ -15,4 +17,8 @@ Route::get('login', function () {
 });
 Route::get('menu_usuario', function () {
     return view('menu_usuario');
+});
+
+Route::get('sobre', function () {
+    return view('sobre');
 });

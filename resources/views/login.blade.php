@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ url('main.css') }}}">
-    <script src="./../../js/index.js" type="module"></script>
+    <link rel="stylesheet" href="{{ url('css/main.css') }}">
 </head>
 <body>
-    <header id="header"></header>
+    <header>
+        @include('include.header')
+    </header>
 
     <main id="main_login">
 
