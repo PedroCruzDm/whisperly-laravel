@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        // Use o modelo User corretamente
-        $users = User::orderByDesc('id')->get();
-
-        return view('Users.show', ['users' => $users]);
+        // Use o modelo User corretamente        
+        $user = User::orderByDesc('id')->get();        
+        return view('Users.show', ['users' => $user]);
     }
 }

@@ -1,11 +1,13 @@
+<html>
+<body>
 
-@section('content')
-    <div class="card mt-4 border-light shadow">
-        <div class="card-header hstack gap-2">
-            <span>Usuarios</span>
+    <div>
+        <div>
+            <h2>Usuarios</h2>
+    
 
-            <span class="ms-auto">
-            <a href="" class="btn btn-success btn-sm" aria-label="Registrar novo usuário" title="Clique aqui para registrar um novo usuário">Registrar</a>
+            <span class="">
+            <a href="{{ url('cadastro') }}">Registrar</a>
             </span>
         </div>
 
@@ -13,9 +15,13 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Nome</th>
                         <th>Email</th>
-                        <th>Acciones</th>
+                        <th>Status</th>
+                        <th>Criado em:</th>
+                        <th>Atualizado em:</th>
+                        <th>Modificações</th>
+                        
                     </tr>
                 </thead>
 
@@ -24,9 +30,16 @@
                         <tr>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            <td><?php if($user->email_verified_at == null){
+                                echo "false";
+                            }else{
+                                echo "true";
+                            } ?></td>
+                            <td>{{ $user->created_at }}</td>
+                            <td>{{ $user->updated_at }}</td>
                             <td>
-                                <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary btn-sm">Editar</a>
-                                <form action="{{ route('user.destroy', $user->id) }}" method="POST" class="d-inline">
+                                <a href="" class="btn btn-primary btn-sm">Editar</a>
+                                <form action="" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
 
@@ -40,6 +53,5 @@
         </div>
     </div>
 
-@endsection
 </body>
 </html>
