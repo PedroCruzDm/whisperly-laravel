@@ -1,8 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <title>Lista de Usuarios</title>
+        <!-- Fonts -->
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        
+        <!-- Styles -->
+
+
+    </head>
 <body>
+    <header>
+        @include('include.header')
+    </header>
 
     <div>
-        <div>
+        <div class="card_lista_users">
             <h2>Usuarios</h2>
     
 
@@ -11,10 +25,10 @@
             </span>
         </div>
 
-        <div class="card-body">
-            <table class="table table-hover">
+        <div class="card_tabela">
+            <table class="tabela_user">
                 <thead>
-                    <tr>
+                    <tr id="list_header">
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Status</th>
@@ -27,23 +41,27 @@
 
                 <tbody>
                     @foreach ($users as $user)
-                        <tr>
+                        <tr id="list_body">
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td><?php if($user->email_verified_at == null){
-                                echo "false";
-                            }else{
-                                echo "true";
-                            } ?></td>
+                            <td>
+                                <?php
+                                    if($user->email_verified_at == null){ 
+                                        echo "<p style='color:red;'>false</p>";
+                                    }else{
+                                        echo "<p style='color:green;'>true</p>";
+                                    }
+                                ?>
+                            </td>
                             <td>{{ $user->created_at }}</td>
                             <td>{{ $user->updated_at }}</td>
                             <td>
-                                <a href="" class="btn btn-primary btn-sm">Editar</a>
-                                <form action="" method="POST" class="d-inline">
+                                <a href=""><button class="btn_editar">Editar</button></a>
+                                <form action="" method="POST">
                                     @csrf
                                     @method('DELETE')
 
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    <button class="btn_delete" type="submit">Eliminar</button>
                                 </form>
                             </td>
                         </tr>
