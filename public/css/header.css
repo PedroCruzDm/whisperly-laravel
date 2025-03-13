@@ -1,13 +1,12 @@
+@import url('main.css');
+@import url('animation.css');
+
 header{
     margin: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #1b4286;
-    justify-content: center;
-    padding: 32;
+    height: 70px;
+    background-color: var(--bg_header);
 }
-
 header nav{
     gap: 30px;
     display: flex;
@@ -23,7 +22,20 @@ nav ul {
     align-items: center;
 }
 header nav ul li a{
-    color: black;
+    color: var(--text_header);
+    font-weight: bold;
     text-decoration: none;
     font-weight: 500;
+}
+header nav ul li a:hover{
+    color: #2B70E4;
+}
+header nav ul li button{
+    background-color: var(--bg_button);
+    font-weight: bolder;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
 }

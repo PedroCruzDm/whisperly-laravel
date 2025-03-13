@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+</head>
 <nav>
     <ul>
         <li>
@@ -14,7 +17,9 @@
             </a>
         </li>
         <li>
-            <p>Contato</p>
+            <a href="{{ url('contato') }}">
+                <p>Contato</p>
+            </a>
         </li>
         <li>
             <a href="{{ url('login') }}">Login</a>
@@ -23,7 +28,7 @@
             <a href="{{ url('cadastro') }}">Registrar-se</a>
         </li>
         <li>
-            <button id="instalar" hidden>Dowload</button>
+            <button id="instalar">Dowload</button>
         </li>
     </ul>
 </nav>

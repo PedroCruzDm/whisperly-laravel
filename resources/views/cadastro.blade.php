@@ -14,15 +14,17 @@
             @include('include.header')
         </header>
 
-        <main id="main_cadastro">
-        <div class="containercadastro">
-            <div class="Titulo">
-                <h1>Whisperly</h1>
-                <h2>Cadastra-se</h2>
-            </div>
+        <main>
+            <div class="main_cadastro">
 
-            <form action="" class="form_cadastro"  method="post"> 
+                <div class="container_cadastro">
+                    <div class="titulo">
+                        <h1>Whisperly</h1>
+                        <h2>Cadastra-se</h2>
+                    </div>
                     
+                    <form action="" class="form_cadastro"  method="post"> 
+                        
                     <div class="grupo_input">
                         <label for="nome">Nome:</label><br>
                         <input type="text" id="nome" name="nome" placeholder="Nome" required><br>
@@ -32,7 +34,7 @@
                         <label for="nickUser">NickUser:</label><br>
                         <input type="text" name="nickUser" id="nickUser" placeholder="Nome de Exibição" required><br>
                     </div>
-
+                    
                     <div class="grupo_input">
                         <label for="email">E-mail:</label><br>
                         <input type="email" name="email" id="email" placeholder="E-mail" required><br>
@@ -42,8 +44,8 @@
                         <label for="numero">Número:</label><br>
                         <input type="text" name="numero" id="numero" placeholder="Número" required><br>
                     </div>
-
-                <div class="divisoria">
+                    
+                    <div class="divisoria">
                     <div class="grupo_input">
                         <label for="senha">Senha:</label><br>
                         <input type="password" name="senha" id="senha" placeholder="Senha" required>
@@ -56,14 +58,18 @@
                 </div>
 
                     <input type="submit" id="btn_cadastrar" value="Cadastrar" class="btn-cadastrar">
-                   <p>Ja possui uma conta? Venha fazer <strong><a href="./login.php">Login</a></strong></p> 
-                
-            </form>
+                    <p>Ja possui uma conta? Venha fazer <strong><a href="{{ url('login') }}">Login</a></strong></p> 
+                    
+                </form>
+            </div>
         </div>
-    </main>
-
+        
+        <div class="div_conteudo"></div>
+        
+        </main>
+        
         <footer>
             @include('include.footer')
         </footer>
     </body>
-</html>
+    </html>

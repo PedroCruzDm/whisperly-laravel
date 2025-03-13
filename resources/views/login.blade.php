@@ -12,55 +12,42 @@
     </header>
 
     <main id="main_login">
+        <div class="caixa_form">
+            <div class="titulo">
+                <h2>Whisperly</h2>
+                <h3>login</h3>
+            </div>
 
-        <div class="Titulo">
-            <h1>Whisperly</h1>
-            <h2>Cadastra-se</h2>
-        </div>
-
-        <div class="containerlogin">
-
-            <form action="./../../model/Logar_usuario.php" method="POST" id="form_login">
-                <center>
-                <div class="titulo">
-
-                    <div class="wrapper">
-	                    <svg>   <text x="50%" y="50%" dy=".15em" text-anchor="middle">Whisperly</text>  </svg>
+            <div class="form_login">
+                <form action="" method="POST">
+                    
+                    <div class="form_grupo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
                     </div>
-                </div>
 
-                    <h2 class="titulo_login">Login</h2>
-                        
-                    <div class="grupo_input">
-                        <label for="nick">Usuario:</label> <br>
-                        <div class="personalizado_input">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="svg_icon bi-person" viewBox="0 0 16 16">
-                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"></path>
-                            </svg>
+                    <div class="form_grupo">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" required>
+                    </div>
 
-                            <input type="text" name="usuario_login" id="usuario_login" placeholder="Usuario" required> <br>
-                            </div>
-                        </div>
-                        
-                        <div class="grupo_input">
-                            <label for="senha">Senha:</label> <br>
-                            <div class="personalizado_input">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="svg_icon bi-lock-fill" viewBox="0 0 16 16">
-                                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
-                                </svg>
-
-                                <input type="password" name="senha_login" id="senha_login" placeholder="Senha" required=""> <br>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" id="btn_logar">Entrar</button>
-                        <p>Não tem uma conta? venha se <strong> <a href="./cadastro.php">registrar-se</a> </strong> </p>
-                    </center>
+                    <div class="campo_btn_login">
+                        <button class="BTN_login" type="submit">Entrar</button>
+                    </div>
+                    
+                    <div class="0senha">
+                        <a style="font-style:none;" href="{{ url('cadastro') }}">Não possui uma conta? <b>Criar conta</b></a>
+                    </div>
                 </form>
             </div>
         </div>
-        
+
+        <div class="div_conteudo">
+            <!-- graficos -->
+        </div>
     </main>
-    <footer id="footer"></footer>
+    <footer>
+        @include('include.footer')
+    </footer>
 </body>
 </html>

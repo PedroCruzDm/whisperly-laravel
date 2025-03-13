@@ -2,10 +2,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::get('/user/show', [UserController::class, 'index'])->name('user.show');
-
-Route::get('/User/show', function () {
-    return view('show');
+Route::get('/', function () {
+    return view('index');
 });
 
 Route::get('cadastro', function () {
@@ -22,3 +20,11 @@ Route::get('menu_usuario', function () {
 Route::get('sobre', function () {
     return view('sobre');
 });
+
+Route::get('/user/show', [UserController::class, 'listar'])->name('user.show');
+
+Route::get('/User/show', function () {
+    return view('show');
+});
+
+Route::post('cadastro', [UserController::class, 'registrar'])->name('user.registrar');

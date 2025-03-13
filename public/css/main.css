@@ -1,62 +1,24 @@
-@import url('cadastro.css');
-@import url('login.css');
-@import url('header.css');
-@import url('footer.css');
-@import url('menu.css');
 @import url('animation.css');
-@import url('user_list.css');
+@import url('header.css');
+@import url('index.css');
+@import url('login.css');
+@import url('cadastro.css');
 
-*
 
+:root{
+    /*Header*/
+    --text_header: black; --bg_header: aliceblue;
+    /*var principais*/
+    --bg_button: #202d46; --bg_branco_button: aliceblue;
+    --bg_principal: #2B70E4; --bg_principal_branco: #fff;
+    --text_branco_principal: white; --text_preto_principal: black;
+
+    /*Index*/
+    --div_index_tamanho: 500px;
+    --cor_dev_info: #2B70E4;
+    --cor_dev_info_donos: #600aff;
+}
 body{
     margin: 0;
-    font-family: "Inter", sans-serif;
-}
-
-.divisoria{
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.caixa_login_cadastro{
-    background-color: #2B70E4;
-    align-content: center;
-    justify-items: center;
-}
-
-.Titulo h1{
-    font-size: 2.5em;
-    margin-top: 10%;
-    color: #fff;
-}
-.campoBTN{
-    margin-bottom: 20%;
-    justify-content: center;
-    align-items: center;
-    
-}
-.campoBTN button{
-    border-radius: 24px;
-    font-weight: bold;
-    font-size: large;
-    padding: 10px;
-}
-button#BTN_cadastro{
-    background-color: #2b2b2b;
-    color: #fff;
-    margin-left: 10px;
-    border: none;
-}
-button#BTN_login{
-    background-color: #fff;
-    color: #2b2b2b;
-    border: none;
-}
-
-.campo_info{
-    align-items: center;
-    justify-items: center;
+    padding: 0;
 }

@@ -1,58 +1,68 @@
-@import url(main.css);
+@import url('main.css');
 
-main#main_cadastro{
-    background-color: #2B70E4;
-    justify-items: center;
-    align-content: center;
-}
-main#main_cadastro .Titulo h1{
-    font-size: 2.5em;
-    margin-top: 10%;
-    color: #fff;
-}
-main#main_cadastro .Titulo h2{
-    font-size: 1.5em;
-    margin-top: -20px;
-    color: #3d3d3d;
-}
-
-main#main_cadastro .form_cadastro{
-    background-color: #fff;
-    width: 100%;
-    padding: 5%;
-    margin: 0 auto;
-    border-radius: 10px;
+.main_cadastro{
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+}
+.container_cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg_principal);
+& .titulo h1{
+    color: var(--text_branco_principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+& .titulo h2{
+    color: var(--text_preto_principal);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
 }
 
-.divisoria{
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
+.form_cadastro{
+    width: 20%;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    justify-items: center;
+    align-items: center;
+
+& .form_grupo{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+& input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ebebeb;
+    color: var(--text_preto_principal);
+    }
 }
 
 .form_cadastro input[type="submit"]{
+    padding: 10px;
     font-weight: bold;
-    margin-top: 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #2B70E4;
+    border-radius: 10px;
     width: 100%;
-    font-size: large;
-    padding: 10px;
-}
-
-.form_cadastro input[type="submit"]:hover{
-    font-weight: bold;
     margin-top: 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #153b7e;
-    font-size: large;
-    padding: 10px;
+    border: none;
+    background-color: var(--bg_button);
+    color: var(--bg_branco_button);
+    cursor: pointer;
+}
+.form_cadastro input[type="submit"]:hover{
+    background-color: var(--bg_principal);
+    color: var(--text_branco_principal);
 }
