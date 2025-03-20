@@ -19,7 +19,7 @@
             </div>
 
             <div class="form_login">
-                <form action="" method="POST">
+                <form action="{{ route('user.show') }}" method="POST">
                     
                     <div class="form_grupo">
                         <label for="email">Email</label>

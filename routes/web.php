@@ -2,29 +2,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [UserController::class, 'index'])->name('user.index');
+Route::get('/show/{user}', [UserController::class, 'show'])->name('user.show');
+Route::get('/create', [UserController::class, 'create'])->name('user.create');
 
-Route::get('cadastro', function () {
-    return view('cadastro');
-});
+Route::post('/store', [UserController::class, 'store'])->name('user.store');
 
-Route::get('login', function () {
-    return view('login');
-});
-Route::get('menu_usuario', function () {
-    return view('menu_usuario');
-});
+Route::put('/update/{user}', [UserController::class, 'update'])->name('user.update');
 
-Route::get('sobre', function () {
-    return view('sobre');
-});
-
-Route::get('/user/show', [UserController::class, 'listar'])->name('user.show');
-
-Route::get('/User/show', function () {
-    return view('show');
-});
-
-Route::post('cadastro', [UserController::class, 'registrar'])->name('user.registrar');
+Route::delete('/destroy/{user}', [UserController::class, 'destroy'])->name('user.destroy');

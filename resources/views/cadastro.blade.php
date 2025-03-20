@@ -23,8 +23,9 @@
                         <h2>Cadastra-se</h2>
                     </div>
                     
-                    <form action="" class="form_cadastro"  method="post"> 
+                    <form action="{{ action([App\Http\Controllers\UserController::class , 'register']) }}" class="form_cadastro"  method="post"> 
                         
+                    @csrf
                     <div class="grupo_input">
                         <label for="nome">Nome:</label><br>
                         <input type="text" id="nome" name="nome" placeholder="Nome" required><br>
@@ -42,7 +43,7 @@
 
                     <div class="grupo_input">
                         <label for="numero">Número:</label><br>
-                        <input type="text" name="numero" id="numero" placeholder="Número" required><br>
+                        <input type="text" name="telefone" id="telefone" placeholder="Número de telefone" required><br>
                     </div>
                     
                     <div class="divisoria">

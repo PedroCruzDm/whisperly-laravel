@@ -57,9 +57,8 @@
                             <td>{{ $user->updated_at }}</td>
                             <td>
                                 <a href=""><button class="btn_editar">Editar</button></a>
-                                <form action="" method="POST">
+                                <form action="" method="put">
                                     @csrf
-                                    @method('DELETE')
 
                                     <button class="btn_delete" type="submit">Eliminar</button>
                                 </form>

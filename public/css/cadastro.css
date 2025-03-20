@@ -11,6 +11,7 @@
     flex-direction: column;
     width: 100%;
     background-color: var(--bg_principal);
+    padding-bottom: 5%;
 & .titulo h1{
     color: var(--text_branco_principal);
     font-size: 2rem;
