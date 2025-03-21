@@ -23,7 +23,7 @@
                         <h2>Cadastra-se</h2>
                     </div>
                     
-                    <form action="{{ action([App\Http\Controllers\UserController::class , 'register']) }}" class="form_cadastro"  method="post"> 
+                    <form action="{{ route('user.create') }}" class="form_cadastro"  method="post"> 
                         
                     @csrf
                     <div class="grupo_input">
