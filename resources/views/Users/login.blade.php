@@ -16,6 +16,13 @@
             <div class="titulo">
                 <h2>Whisperly</h2>
                 <h3>login</h3>
+
+                @if (session('message'))
+                    <div class="alert alert-danger">
+                        {{ session('message') }}
+                    </div>
+                
+                @endif
             </div>
 
             <div class="form_login">

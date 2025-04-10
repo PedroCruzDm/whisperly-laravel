@@ -19,8 +19,8 @@
             </div>
 
             <div class="campoBTN">
-                <button id="BTN_entrar" onclick="window.location.href='/login'">Entrar</button>
-                <button id="BTN_cadastro" onclick="window.location.href='/cadastro'">Cadastrar-se</button>
+                <button id="BTN_entrar" onclick="window.location.href='/users/login'">Entrar</button>
+                <button id="BTN_cadastro" onclick="window.location.href='/users/create'">Cadastrar-se</button>
             </div>
 
         </div>

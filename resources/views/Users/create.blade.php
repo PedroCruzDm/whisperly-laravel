@@ -58,7 +58,7 @@
                         </div>
 
                         <input type="submit" id="btn_cadastrar" value="Cadastrar" class="btn-cadastrar">
-                        <p>Já possui uma conta? Venha fazer <strong><a href="{{ url('login') }}">Login</a></strong></p> 
+                        <p>Já possui uma conta? Venha fazer <strong><a href="{{ url('users/login') }}">Login</a></strong></p> 
                     </form>
                 </div>
             </div>

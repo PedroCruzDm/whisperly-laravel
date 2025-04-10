@@ -12,7 +12,7 @@
             <a href="/">Home</a>
         </li>
         <li>
-            <a href="{{ url('pages/sobre') }}">
+            <a href="{{ url('/sobre') }}">
                 <p>Sobre nós</p>
             </a>
         </li>
@@ -28,7 +28,7 @@
             <a href="{{ url('cadastro') }}">Registrar-se</a>
         </li>
         <li>
-            <button id="instalar">Dowload</button>
+            <button id="instalar" hidden>Dowload</button>
         </li>
     </ul>
 </nav>

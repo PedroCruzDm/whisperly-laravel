@@ -7,7 +7,14 @@
 
 :root{
     /*Header*/
-    --text_header: black; --bg_header: aliceblue;
+
+    /*Text*/
+    --text_header-branco: white; --text_header-dark: black;
+    
+    /*Background*/
+    --bg_header_branco: #fff; --bg_header_dark: #000;
+    --bg_header: #124399;
+
     /*var principais*/
     --bg_button: #202d46; --bg_branco_button: aliceblue;
     --bg_principal: #2B70E4; --bg_principal_branco: #fff;
@@ -21,4 +28,12 @@
 body{
     margin: 0;
     padding: 0;
+}
+
+.divisoria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
